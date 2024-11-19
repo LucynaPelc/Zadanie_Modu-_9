@@ -11,26 +11,26 @@ function getRandomHexColor() {
        
 function changeBackGroundColor () {
 
-    document.body.style.backgroundColour = getRandomHexColor();
-    setTimeout(changeBackGroundColor, 1000);
+    document.body.style.backgroundColor = getRandomHexColor();
+    setInterval(changeBackGroundColor, 1000);
     console.log(changeBackGroundColor);
 }
 
 {/* <button type="button" data-start>Start</button>
     <button type="button" data-stop>Stop</button> */}
 
-    const startButton = document.querySelector('button[data-start="start"]');
-        button.addIventListener('click', function() {
-        this.disabled = true;
-        document.querySelector('button[data-stop="stop"]'); disabled = false;
+    const startButton = document.querySelector('button[data-start]');
+        button.addEventListener('click', function() {
+        startButton.disabled = true;
+        document.querySelector('button[data-stop]'); stopButton.disabled = false;
         changeBackGroundColor();
     });   
 console.log(startButton.dataset.start);
   
-    const stopButton = document.querySelector('button[data-stop="staop"]');
-        button.addIventListener('click', function() {
+    const stopButton = document.querySelector('button[data-stop]');
+        button.addEventListener('click', function() {
         this.disabled = true;
-        document.querySelector('button[data-start="start"]'); disabled = false;
+        document.querySelector('button[data-start]'); disabled = false;
         changeBackGroundColor();
     });   
 console.log(stopButton.dataset.stop);
