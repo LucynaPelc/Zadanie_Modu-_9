@@ -20,7 +20,7 @@ function changeBackGroundColor () {
     <button type="button" data-stop>Stop</button> */}
 
     const startButton = document.querySelector('button[data-start]');
-        button.addEventListener('click', function() {
+        startButton.addEventListener('click', function() {
         startButton.disabled = true;
         document.querySelector('button[data-stop]'); stopButton.disabled = false;
         changeBackGroundColor();
@@ -28,7 +28,7 @@ function changeBackGroundColor () {
 console.log(startButton.dataset.start);
   
     const stopButton = document.querySelector('button[data-stop]');
-        button.addEventListener('click', function() {
+        stopButton.addEventListener('click', function() {
         this.disabled = true;
         document.querySelector('button[data-start]'); disabled = false;
         changeBackGroundColor();
