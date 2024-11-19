@@ -6,10 +6,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale(.7);
   background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
+  color: #881212;
+  line-height: 3;
 }
 
 img {

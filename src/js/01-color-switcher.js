@@ -1,7 +1,12 @@
-// const button = document.querySelector(".button");
-// button.style.fontSize = "24px";
-// button.style.textAlign = "center";
-// console.log(button.style);
+// const startButton = document.querySelector('button[data-start]');
+// startButton.style.fontSize = "100px";
+// startButton.style.textAlgin = "center";
+// console.log(startButton)
+
+// const stopButton = document.querySelector('button[data-stop]');
+// stopButton.style.fontSize = "100px";
+// stopButton.style.textAlgin = "center";
+// console.log(stopButton)
 
 
 
