@@ -1,7 +1,7 @@
-const button = document.querySelector(".button");
-button.style.fontSize = "24px";
-button.style.textAlign = "center";
-console.log(button.style);
+// const button = document.querySelector(".button");
+// button.style.fontSize = "24px";
+// button.style.textAlign = "center";
+// console.log(button.style);
 
 
 
