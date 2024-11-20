@@ -2,13 +2,13 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
        
-function changeBackGroundColor () {
+function changeBackGroundColor () {  
     document.body.style.backgroundColor = getRandomHexColor();
-    setInterval(changeBackGroundColor, 1000); 
-
+    setInterval (changeBackGroundColor, 1000); 
 function stopChangeBackGroundColor()  {
     clearInterval(changeBackGroundColor) ;
-}}
+ }
+}
 
 {/* <button type="button" data-start>Start</button>
     <button type="button" data-stop>Stop</button> */}
@@ -23,6 +23,4 @@ function stopChangeBackGroundColor()  {
         stopButton.addEventListener('click', function() {         
         stopButton.disabled = true;
         document.querySelector('button[data-start]'); startButton.disabled = false;   
-        changeBackGroundColor(); 
     });    
-    
