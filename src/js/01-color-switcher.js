@@ -6,8 +6,10 @@ function changeBackGroundColor () {
     document.body.style.backgroundColor = getRandomHexColor();
     setInterval (changeBackGroundColor, 1000); 
 function stopChangeBackGroundColor()  {
+        document.body.style.backgroundColor = getRandomHexColor();  
     clearInterval(changeBackGroundColor) ;
- }
+    }
+ 
 }
 
 {/* <button type="button" data-start>Start</button>
@@ -24,3 +26,5 @@ function stopChangeBackGroundColor()  {
         stopButton.disabled = true;
         document.querySelector('button[data-start]'); startButton.disabled = false;   
     });    
+    
+    
