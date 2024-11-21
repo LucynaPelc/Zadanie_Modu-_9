@@ -1,30 +1,33 @@
-function getRandomHexColor() {  
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-       
-function changeBackGroundColor () {  
-    document.body.style.backgroundColor = getRandomHexColor();
-    setInterval (changeBackGroundColor, 1000); 
-function stopChangeBackGroundColor()  {
-        document.body.style.backgroundColor = getRandomHexColor();  
-    clearInterval(changeBackGroundColor) ;
+
+    function getRandomHexColor() {  
+        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     }
- 
-}
-
-{/* <button type="button" data-start>Start</button>
-    <button type="button" data-stop>Stop</button> */}
-
+    
+    let intervalId;
+    
+    function changeBackGroundColor() {  
+        document.body.style.backgroundColor = getRandomHexColor();
+    }
+    
+    function startChangingColor() {
+        intervalId = setInterval(changeBackGroundColor, 1000);
+    }
+    
+    function stopChangingColor() {
+        clearInterval(intervalId);
+    }
+    
     const startButton = document.querySelector('button[data-start]');
-        startButton.addEventListener('click', function() {
-        startButton.disabled = true;
-        document.querySelector('button[data-stop]'); stopButton.disabled = false;
-        changeBackGroundColor();
-    });   
     const stopButton = document.querySelector('button[data-stop]');
-        stopButton.addEventListener('click', function() {         
+    
+    startButton.addEventListener('click', function() {
+        startButton.disabled = true;
+        stopButton.disabled = false;
+        startChangingColor();
+    });
+    
+    stopButton.addEventListener('click', function() {
         stopButton.disabled = true;
-        document.querySelector('button[data-start]'); startButton.disabled = false;   
-    });    
-    
-    
+        startButton.disabled = false;
+        stopChangingColor();
+    });
